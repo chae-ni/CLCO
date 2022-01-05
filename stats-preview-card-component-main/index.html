@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    /*----------------------------------------------------------------*/
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+    *{margin: 0; padding: 0;}
+    html, body{width: 100%; height: 100%;}
+    #container{
+      width:100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      background-color: hsl(233, 47%, 7%);
+    }
+    #wrap{width: 1100px; display: flex; border-radius: 6px;}
+    #text{
+      box-sizing: border-box;
+      width: 50%;
+      background-color: hsl(244, 38%, 16%);
+      color: white;
+      padding: 71px;
+    }
+    #text > h1{font-size: 36px; margin-bottom: 28px; font-weight: bold;}
+    #text > h1 > span{color: hsl(277, 64%, 61%);}
+    #text > p{opacity: 0.75; width: 378px;line-height: 1.4;}
+
+    #date{
+      display: flex;
+      margin-top: 72px;
+    }
+    #date > div{
+      margin-right: 62px;
+    }
+
+    #date > div > p{
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    #date > div > span{
+      opacity: 0.6;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    #img {
+      width: 50%;
+      background-image: url(images/image-header-desktop.jpg);
+      background-size: 100% ;
+      background-repeat: no-repeat;
+    }
+    #img > span{display: none;}
+
+     
+    @media all and (max-width:1023px) { 
+      #wrap{
+        flex-direction: column-reverse;
+        width: 327px;
+      }
+      
+
+      #img {
+        width: 327px;
+        height: 240px;
+        background-image: url(images/image-header-mobile.jpg);
+        background-size: cover ;
+      }
+      #text{
+        width: 100%;
+        padding: 35px;
+        
+      }
+
+      #text > h1{font-size: 28px; margin-bottom: 20px; text-align: center;}
+      #text > p{width: 261px;line-height: 1.6; text-align: center;}
+
+    #date{
+      flex-direction: column;
+      align-items: center;
+      margin-top: 72px;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    #date > div{margin-right: 0px; margin-bottom: 26px;}
+    #date > div:last-child{margin-bottom: 0;}
+
+    #date > div > p{
+      font-size: 24px;
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <div id="wrap">
+      <section id="text">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency. </p>
+  
+        <section id="date">
+          <div id="companies">
+            <p>10k+</p>
+            <span>companies</span>
+          </div>
+          <div id="templates">
+            <p>314</p>
+            <span>templates</span>
+          </div>
+          <div id="queries">
+            <p>12M+</p>
+            <span>queries</span>
+          </div>
+        </section>
+      </section>
+      <section id="img">
+        <span>main img</span>
+      </section>
+    </div>
+    
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
